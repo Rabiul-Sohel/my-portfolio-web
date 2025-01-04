@@ -43,11 +43,11 @@ export default {
       },
       keyframes: {
         "bounce-reverse": {
-          "0%, 100%": { transform: "translateY(35%)", animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)" },
-          "50%": { transform: "translateY(-20%) translateX(-15%)", animationTimingFunction: "cubic-bezier(0.3, 0, 0.2, 1)" },
+          "0%, 100%": { transform: "translateY(25%)", animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)" },
+          "50%": { transform: "translateY(-10%) translateX(-10%)", animationTimingFunction: "cubic-bezier(0.3, 0, 0.2, 1)" },
         },
         "bounce-slow": {
-          "0%, 100%": { transform: "translateY(35%)", animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)" },
+          "0%, 100%": { transform: "translateY(25%)", animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)" },
           "50%": { transform: "translateY(0) translateX(10%)", animationTimingFunction: "cubic-bezier(0.3, 0, 0.2, 1)" },
         },
 

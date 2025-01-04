@@ -1,11 +1,11 @@
 'use client'
 import React from 'react';
 import { FaBook, FaBookOpen, FaBookOpenReader } from 'react-icons/fa6';
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import Html from '../Chart/Html';
 import { useInView } from 'react-intersection-observer';
 
-const skill =[
+const skill = [
     {
         language: 'HTML & CSS',
         amount: '95%'
@@ -18,7 +18,7 @@ const skill =[
         language: 'Figma',
         amount: '85%'
     },
-   
+
     {
         language: 'Next JS',
         amount: '70%'
@@ -30,18 +30,22 @@ const skill =[
 
 ]
 const Education = () => {
-    const {ref, inView} = useInView({
+    const [ref1, inView1] = useInView({
+        threshold: 0.2,
+        triggerOnce: true
+    })
+    const [ref2, inView2] = useInView({
         threshold: 0.2,
         triggerOnce: true
     })
     return (
-        <motion.div
-        ref={ref}
-        initial= {{opacity: 0, y: 100}}
-        animate = { inView ? {opacity:1, y: 0} : {} }
-        transition={{duration: 0.7, ease: 'easeIn'}}
-         className='flex flex-col lg:flex-row mx-5 gap-8 mt-12'>
-            <div className='bg-deepBlue flex-1 p-6 rounded-xl '>
+        <div className='flex flex-col lg:flex-row mx-5 gap-8 mt-12'>
+
+            <motion.div
+                ref={ref1}
+                initial={{ opacity: 0, y: 100 }}
+                animate={inView1 ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.7, ease: 'easeIn' }} className='bg-deepBlue flex-1 p-6 rounded-xl '>
                 <h3 className='text-gold text-4xl font-semibold'>Education</h3>
                 <div className='mt-4 space-y-6'>
                     <div className='flex flex-col gap-1'>
@@ -55,19 +59,24 @@ const Education = () => {
                         <h3 className='text-2xl font-semibold'>B.A.(Hons) In Bangla</h3>
                     </div>
                 </div>
-            </div>
-            <div className='bg-deepBlue flex-1 p-6 rounded-xl '>
-                <h3 className='text-gold text-4xl font-semibold uppercase mb-6'>Skills</h3>
-                <div className='space-y-5'>
-                   {
-                    skill.map((item, idx)=>(
-                        <Html key={idx} language={item.language} skill={item.amount}/>
-                    ))
-                   }
-                </div>
-            </div>
-
-        </motion.div>
+            </motion.div>
+            <motion.div
+                    ref={ref2}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={inView2 ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.7, ease: 'easeIn' }}
+                    className='bg-deepBlue flex-1 p-6 rounded-xl '>
+                    <h3 className='text-gold text-4xl font-semibold uppercase mb-6'>Skills</h3>
+                    <div className='space-y-5'>
+                        {
+                            skill.map((item, idx) => (
+                                <Html key={idx} language={item.language} skill={item.amount} />
+                            ))
+                        }
+                    </div>
+                </motion.div>
+            
+        </div>
     );
 };
 

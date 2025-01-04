@@ -10,7 +10,15 @@ import SectionTitle from '../../Shared/SectionTitle';
 
 
 const MyWork = () => {
-    const { ref, inView } = useInView({
+    const [ ref1, inView1]  = useInView({
+        threshold: 0.2,
+        triggerOnce: true
+    })
+    const  [ref2, inView2]  = useInView({
+        threshold: 0.2,
+        triggerOnce: true
+    })
+    const  [ref3, inView3]  = useInView({
         threshold: 0.2,
         triggerOnce: true
     })
@@ -18,11 +26,11 @@ const MyWork = () => {
     return (
         <div className=' py-12 md:py-36 overflow-hidden'>
             <SectionTitle title={'What I Do'} subTitle='My Services' />
-            <div ref={ref} className='flex flex-col lg:flex-row mx-2 gap-8 mt-12 lg:mt-24'>
+            <div ref={ref1} className='flex flex-col lg:flex-row mx-5 gap-8 mt-12 lg:mt-24'>
                 <motion.div
                     
                     initial={{ opacity: 0, x: -200 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    animate={inView1 ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5, }}
                     className="p-8 bg-[#052336]  rounded-xl overflow-hidden space-y-8 flex-1"
                 >
@@ -37,9 +45,9 @@ const MyWork = () => {
 
                 </motion.div>
                 <motion.div
-                    ref={ref}
+                    ref={ref2}
                     initial={{ opacity: 0, y: 200 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    animate={inView2 ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, }}
                     className="p-8 bg-[#052336]  rounded-xl overflow-hidden space-y-8 flex-1"
                 >
@@ -55,8 +63,9 @@ const MyWork = () => {
                 </motion.div>
 
                 <motion.div
+                    ref={ref3}
                     initial={{ opacity: 0, x: 200 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    animate={inView3 ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5, }}
                     className='p-8 flex-1 overflow-hidden bg-[#052336]  rounded-xl  space-y-8'
 

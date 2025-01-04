@@ -39,7 +39,7 @@ const Navbar = () => {
     const navMenu = navItems.map(item => (
         <li key={item.path}>
 
-            <Link className={`${pathname === item.path ? 'border border-gold' : 'border-transparent'} text-white hover:bg-blue px-5 py-3 rounded-full transition duration-300 border-b-4   hover:border-gold hover:shadow-xl`} href={item.path}>  {item.text} </Link>
+            <Link className={`${pathname === item.path ? 'border border-gold'  : 'border-transparent'} ${item.path === '/contact' && 'bg-lightBlue shadow-xl'} text-white hover:bg-blue px-5 py-3 rounded-full transition duration-300 border-b-4   hover:border-gold hover:shadow-xl`} href={item.path}>  {item.text} </Link>
         </li>
     ))
 
@@ -52,7 +52,7 @@ const Navbar = () => {
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
+                                className="h-8 w-8 bg-blue p-1 rounded-md"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -65,7 +65,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-deepBlue rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             {navMenu}
                         </ul>
                     </div>
