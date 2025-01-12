@@ -39,7 +39,7 @@ const Navbar = () => {
     const navMenu = navItems.map(item => (
         <li key={item.path}>
 
-            <Link className={`${pathname === item.path ? 'border border-gold'  : 'border-transparent'} ${item.path === '/contact' && 'bg-lightBlue shadow-xl'} text-white hover:bg-blue px-5 py-3 rounded-full transition duration-300 border-b-4   hover:border-gold hover:shadow-xl`} href={item.path}>  {item.text} </Link>
+            <Link className={`${pathname === item.path ? 'border border-gold text-white'  : 'border-transparent'} ${item.path === '/contact' && 'bg-lightBlue shadow-xl'} text-white hover:bg-blue px-5 py-3 rounded-full transition duration-300 border-b-4   hover:border-gold hover:shadow-xl`} href={item.path}>  {item.text} </Link>
         </li>
     ))
 

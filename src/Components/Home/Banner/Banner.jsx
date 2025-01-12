@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import photo from '@/assets/sohel-port.png'
+import photo from '@/assets/rabiul_sohel.png'
 import Image from 'next/image';
 import { inView, motion } from "framer-motion";
 import CountUp from 'react-countup';
@@ -62,8 +62,8 @@ const Banner = () => {
                     </motion.div>
 
                 </div>
-                <div className='flex-1 relative'>
-                    <Image className='w-[90%]' alt='sohel photo' src={photo} />
+                <div className='flex-1 w-full relative'>
+                    <Image className='w-[90%]  mx-auto'  alt='Rabiul Sohel' src={photo} />
 
 
                 </div>
@@ -75,23 +75,23 @@ const Banner = () => {
                 </div>
 
                 <div className='relative  mt-10 lg:mt-16'>
-                    <div className=' left-0 lg:-left-96 bottom-0 lg:-bottom-10  lg:absolute    md:flex flex-col items-center border-2 animate-bounce-slow px-12 md:px-24 py-2  rounded-full bg-background border-gold'>
-                        <h3 ref={ref} className='text-sm md:text-3xl font-bold'>
+                    <div className=' left-0 lg:-left-96 bottom-0 lg:-bottom-10  lg:absolute    md:flex flex-col items-center border-2 animate-bounce-slow px-12 md:px-24 py-2  rounded-full bg-background border-blue'>
+                        <h3 ref={ref} className='text-3xl font-bold'>
                             {
                                 inView ? <CountUp end={5} /> : 0
                             }
                             +</h3>
-                        <p className='text-xs md:text-base'>Years of <br /> Experience</p>
+                        <p className='text-base'>Years of <br /> Experience</p>
                     </div>
                     <div className=' relative lg:absolute mt-5 bottom-0 lg:-bottom-28  left-0 lg:-left-16 md:flex flex-col items-center border-2 animate-bounce-reverse px-12 md:px-24 py-2  rounded-full bg-background border-gold'>
-                        <div ref={ref} className=' text-sm md:text-3xl font-bold flex'>
+                        <div ref={ref} className=' text-3xl font-bold flex'>
                             {
                                 inView ? <CountUp end={25} /> : 0
                             }
 
                             +
                         </div>
-                        <p className='text-xs lg:text-base'>Completed <br /> Projects</p>
+                        <p className='text-base'>Completed <br /> Projects</p>
                     </div>
                 </div>
             </div>

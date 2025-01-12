@@ -10,17 +10,17 @@ const Footer = () => {
                 <Link className='bg-white  p-4 shadow-blue rounded-full hover:bg-gold transition duration-300  hover:text-white' href="https://github.com/Rabiul-Sohel">
                     <FaGithub />
                 </Link>
-                <a className='bg-white shadow-blue p-4 rounded-full hover:bg-gold transition duration-300 hover:text-white' href="https://x.com/RabiulSohel1">
+                <a className='bg-white shadow-blue p-4 rounded-full hover:bg-gold transition duration-300 hover:text-white' href="https://x.com/Rabiul__Sohel">
                     <FaTwitter />
                 </a>
                 <a className='bg-white shadow-blue p-4 rounded-full hover:bg-gold transition duration-300 hover:text-white' href="https://www.linkedin.com/in/rabiul-alam-sohel-7b7725251/">
                     <FaLinkedinIn />
                 </a>
                 
-                <a className='bg-white shadow-blue p-4 rounded-full hover:bg-gold transition duration-300 hover:text-white' href="https://www.youtube.com/@rabiulsohel159/videos">
+                <a className='bg-white shadow-blue p-4 rounded-full hover:bg-gold transition duration-300 hover:text-white' href="https://www.youtube.com/@rabiul_sohel">
                     <FaYoutube />
                 </a>
-                <a className='bg-white shadow-blue p-4 rounded-full hover:bg-gold transition duration-300 hover:text-white' href="https://www.instagram.com/rabiulsohel1/">
+                <a className='bg-white shadow-blue p-4 rounded-full hover:bg-gold transition duration-300 hover:text-white' href="https://www.instagram.com/rabiul_sohel/">
                 <AiFillInstagram />
                 </a>
             </div>

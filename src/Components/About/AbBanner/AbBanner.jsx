@@ -17,7 +17,7 @@ const AbBanner = () => {
                 transition={{ duration: 0.8, ease: 'easeIn' }}
                 className="  rounded-xl overflow-hidden  flex-1"
             >
-                <Image src={mainImage} className='mx-auto w-full lg:w-2/5  ' alt='sohel photo' />
+                <Image src={mainImage} className='mx-auto w-full lg:w-2/5  ' alt='Rabiul Sohel' />
             </motion.div>
             <div ref={ref} className='relative lg:absolute lg:-bottom-14 text-center  justify-center w-full'>
                 <motion.div

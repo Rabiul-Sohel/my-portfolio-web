@@ -6,8 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import { FaArrowRight, FaLaptopCode, FaWordpress } from "react-icons/fa6";
 import Image from 'next/image';
 import reactImage from '@/assets/bistro-boss.png'
-import nextImage from '@/assets/car-doctor.png'
-import htmlImage from '@/assets/batikrom.png'
+
 
 const Testimonials = () => {
     const  [ref1, inView1]  = useInView({
