@@ -75,7 +75,7 @@ const Banner = () => {
                 </div>
 
                 <div className='relative  mt-10 lg:mt-16'>
-                    <div className=' left-0 lg:-left-96 bottom-0 lg:-bottom-10  lg:absolute    md:flex flex-col items-center border-2 animate-bounce-slow px-12 md:px-24 py-2  rounded-full bg-background border-blue'>
+                    <div className=' left-0 lg:-left-96 bottom-0 lg:-bottom-10  lg:absolute    md:flex flex-col items-center border-2 animate-bounce-slow px-12 md:px-24 py-2  rounded-full bg-background border-gold'>
                         <h3 ref={ref} className='text-3xl font-bold'>
                             {
                                 inView ? <CountUp end={5} /> : 0
